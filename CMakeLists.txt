@@ -121,6 +121,11 @@ if (NOT CMAKE_VERSION VERSION_LESS 3.3)
   cmake_policy(SET CMP0057 NEW)
 endif ()
 
+# In order to support the Xcode "new build system"
+if(POLICY CMP0114)
+    cmake_policy(SET CMP0114 NEW)
+endif()
+
 include(CheckIncludeFile)
 include(CMakeDependentOption)
 
